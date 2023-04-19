@@ -1,0 +1,586 @@
+body{
+    background-color: rgb(14, 14, 14);
+    font-family: sans-serif;
+}
+#login{
+    display: flex;
+    justify-content: center;
+    color: aqua;
+}
+#contact{
+    cursor: pointer;
+    width: 180px;
+}
+#contact:hover{
+    border-bottom: solid aqua 2px;
+}
+#showcontact{
+    display: none;
+}
+/************************************************************************* BORDER ANIMATION *************************************************************************/
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --x {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+@property --y {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+:root {
+    
+	--d: 4000ms;
+	--angle: 80deg;
+	--x: 100%;
+	--y: 50%;
+	--c1: aqua;
+	--c2: rgb(14, 14, 14);
+}
+
+#logincontent{
+    background-color: rgb(23, 23, 23);
+    display: block;
+    height: 500px;
+    width: 500px;
+    margin-top: 75px;
+    padding-top: 50px;   
+    color: aqua;
+    border-radius: 16px;
+    border: 5px solid;
+    border-color: aqua;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+
+}
+@keyframes borderRotate {
+	100% {
+		--angle: 440deg;
+	}
+}
+
+/************************************************************************* END BORDER ANIMATION *************************************************************************/
+#userinfo{
+    margin-left: 40px;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#username{
+    color: aqua;
+    background-color: rgb(23, 23, 23);
+    width: 400px;
+    height: 50px;
+    border: 0;
+    border-bottom: solid;
+}
+#password{
+    color: aqua;
+    background-color: rgb(23, 23, 23);
+    width: 400px;
+    height: 50px;
+    border: 0;
+    border-bottom: solid;
+}
+#erro{
+    display: none;
+    color: aqua;
+    font-family: sans-serif;
+}
+#buttonstyle1{
+    margin-left: 40px;
+    color: aqua;
+    background-color: rgb(18, 18, 18);
+    width: 200px;
+    height: 50px;
+    border: 2px solid aqua;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+#buttonstyle1:hover {
+    background: aqua;
+    color: black;
+}
+#buttonstyle2{
+    margin-left: 40px;
+    color: aqua;
+    background-color: rgb(18, 18, 18);
+    width: 200px;
+    height: 50px;
+    border: 2px solid aqua;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+#buttonstyle2:hover {
+    background: aqua;
+    color: black;
+}
+/************************************************************************* SITE CONTENT *************************************************************************/
+#sitecontent{
+    display: none;
+    color: aqua;
+    background-color: rgb(18, 18, 18);;
+}
+
+#header{
+    margin-left: -10px;
+    margin-top: -15px;
+    position: fixed;
+    background-color: rgb(14, 14, 14);
+    width: 100%;
+    height: 75px;
+    border-bottom: solid;
+    border-color: aqua;
+}
+
+#header-content{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1100px;
+    
+}
+
+#menu{
+    margin-top: 8px;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+#sandwich_menu{
+    background-color: rgb(14, 14, 14);
+    display: block;
+    margin-top: 60px;
+    margin-left: -10px;
+    border-right: solid;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    animation: slide-animation-right 0.5s;
+}
+@keyframes slide-animation-right {
+    from {
+      left: -150px;
+    }
+    to {
+      left: 7px;
+    }
+
+    0%{
+        border-color: rgb(18, 18, 18);
+    }
+    40%{
+        border-color: rgb(14, 14, 14);
+    }
+    100%{
+        border-color: aqua;
+    }
+}
+@keyframes slide-animation-left {
+    from {
+      left: 7px;
+    }
+    to {
+      left: 150px;
+    }
+
+    0%{
+        border-color: aqua;
+    }
+    40%{
+        border-color: rgb(14, 14, 14);
+    }
+    100%{
+        border-color: rgb(18, 18, 18);
+    }
+}
+
+#conteudo_sandwich{
+    font-family: sans-serif;
+    margin-left: 40px;
+    margin-top: 105px;
+    gap:70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#usercontent{
+    background-color: rgb(18, 18, 18);
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+}
+#my_page{
+    cursor: pointer;
+    width: 75px;
+    border-bottom:solid rgb(18, 18, 18);
+}
+#my_page:hover{
+    color: white;
+    border-bottom:solid white;
+    animation: border-animation-my_page 1s;
+}
+@keyframes border-animation-my_page{
+    0%{
+        color: aqua;
+        width: 65px;
+        border-bottom:solid rgb(18, 18, 18);
+    }
+    25%{
+        color: white;
+    }
+    100%{
+        width: 75px;
+        border-color: white;
+    }
+}
+#old_classes{
+    cursor: pointer;
+    width: 100px;
+    border-bottom:solid rgb(18, 18, 18);
+}
+#old_classes:hover{
+    border-bottom:solid white;
+    color: white;
+    animation: border-animation-old_classes 1s;   
+}
+@keyframes border-animation-old_classes{
+    0%{
+        color: aqua;
+        width: 90px;
+        border-bottom:solid rgb(18, 18, 18);
+    }
+    25%{
+        color: white;
+    }
+    100%{
+        width: 100px;
+        border-color: white;
+    }
+}
+#extra_tasks{
+    cursor: pointer;
+    width: 95px;
+    border-bottom:solid rgb(18, 18, 18);
+}
+#extra_tasks:hover{
+    color: white;
+    border-bottom:solid white;
+    animation: border-animation-extra_tasks 1s;   
+}
+@keyframes border-animation-extra_tasks{
+    0%{
+        color: aqua;
+        width: 85px;
+        border-bottom:solid rgb(18, 18, 18);
+    }
+    25%{
+        color: white;
+    }
+    100%{
+        width: 95px;
+        border-color: white;
+    }
+}
+#new_vocabulary{
+    cursor: pointer;
+    width: 90px;
+    border-bottom:solid rgb(18, 18, 18);
+}
+#new_vocabulary:hover{
+    color: white;
+    border-bottom:solid white;
+    animation: border-animation-new_vocabulary 1s;   
+}
+@keyframes border-animation-new_vocabulary{
+    0%{
+        color: aqua;
+        width: 80px;
+        border-bottom:solid rgb(18, 18, 18);
+    }
+    25%{
+        color: white;
+    }
+    100%{
+        width: 90px;
+        border-color: white;
+    }
+}
+#exercises{
+    cursor: pointer;
+    border-bottom:solid rgb(18, 18, 18);
+    width: 80px;
+}
+#exercises:hover{
+    color: white;
+    border-bottom:solid white;
+    animation: border-animation-exercises 1s;   
+}
+@keyframes border-animation-exercises{
+    0%{
+        width: 70px;
+        color: aqua;
+        border-bottom:solid rgb(18, 18, 18);
+    }
+    25%{
+        color: white;
+    }
+    100%{
+        width: 80px;
+        border-color: white;
+    }
+}
+#rules{
+    cursor: pointer;
+    width: 50px;
+    border-bottom:solid rgb(18, 18, 18);
+}
+#rules:hover{
+    border-bottom:solid white;
+    color: white;
+    animation: border-animation-rules 1s;   
+}
+@keyframes border-animation-rules{
+    0%{
+        color: aqua;
+        width: 40px;
+        border-bottom:solid rgb(18, 18, 18);
+    }
+    25%{
+        color: white;
+    }
+    100%{
+        width: 50px;
+        border-color: white;
+    }
+
+}
+#mypage{
+    display: block;
+    margin-left: 200px;
+}
+#oldclasses{
+    display: none;
+    margin-left: 200px;
+}
+#extratasks{
+    display: none;
+    margin-left: 200px;
+}
+#newvocabulary{
+    display: none;
+    margin-left: 200px;
+}
+#exercisestab{
+    display: none;
+    margin-left: 200px;
+}
+#rulestab{
+    background-color: rgb(18, 18, 18);
+    display: none;
+    margin-left: 200px;
+}
+
+#tenses{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    gap: 100px;
+    
+}
+
+#past_tense{
+    cursor: pointer;
+}
+
+#pasttenses{
+    display: none;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+#present_tense{
+    cursor: pointer;
+}
+
+#presenttenses{
+    display: none;
+    margin-top: 30px;
+    margin-left: 40px;
+}
+/************************************************************************* USERS *************************************************************************/
+#mypage_Anna22{
+    display: none;
+}
+#mypage_Victoria22{
+    display: none;
+}
+#mypage_Tanya22{
+    display: none;
+}
+#mypage_Angelika22{
+    display: none;
+}
+#mypage_Margo22{
+    display: none;
+}
+#mypage_Discoduck22{
+    display: none;
+}
+#mypage_Anastasia22{
+    display: none;
+}
+#mypage_Alex22{
+    display: none;
+}
+#mypage_Alavierdov22{
+    display: none;
+}
+#mypage_Olena22{
+    display: none;
+}
+#mypage_Violeta22{
+    display: none;
+}
+#mypage_Veronika22{
+    display: none;
+}
+#mypage_Maria22{
+    display: none;
+}
+#mypage_Julia22{
+    display: none;
+}
+#mypage_Matvey22{
+    display: none;
+}
+#mypage_Marina22{
+    display: none;
+}
+
+
+/************************************************************************* TENSES(>Rules) *************************************************************************/
+#PresentSimple{
+    cursor: pointer;
+    width: 240px;
+}
+#PresentSimple_Content{
+    display: none;
+}
+#PresentContinuous{
+    cursor: pointer;
+    width: 240px;
+}
+#PresentContinuous_Content{
+    display: none;
+}
+#PresentPerfect{    
+    cursor: pointer;
+    width: 240px;}
+#PresentPerfect_Content{
+    display: none;
+}
+#PresentPerfectContinuous{
+    cursor: pointer;
+    width: 240px;
+}
+#PresentPerfectContinuous_Content{
+    display: none;
+}
+#PastSimple{
+    cursor: pointer;
+    width: 240px;
+}
+#PastSimple_Content{
+    display: none;
+}
+#PastContinuous{
+    cursor: pointer;
+    width: 240px;
+}
+#PastContinuous_Content{
+    display: none;
+}
+#PastPerfect{
+    cursor: pointer;
+    width: 240px;
+}
+#PastPerfect_Content{
+    display: none;
+}
+#PastPerfectContinuous{
+    cursor: pointer;
+    width: 240px;
+}
+#PastPerfectContinuous_Content{
+    display: none;
+}
+#FutureSimple{
+    cursor: pointer;
+    width: 240px;
+}
+#FutureSimple_Content{
+    display: none;
+}
+#PassiveVoice{
+    cursor: pointer;
+    width: 240px;
+}
+#PassiveVoice_Content{
+    display: none;
+}
+#ConditionalSentences{
+    cursor: pointer;
+    width: 240px;
+}
+#ConditionalSentences_Content{
+    display: none;
+}
+#Gerund{
+    cursor: pointer;
+    width: 240px;
+}
+#Gerund_Content{
+    display: none;
+}
+/************************************************************************* Exercices styles(>Rules) *************************************************************************/
+
+#exercise_subject{
+    height: 40px;
+    width: 250px;
+    cursor: pointer;
+}
+#exercises_type_1{
+    display: none;
+}
+#exercises_type_2{
+    display: none;
+}
+#exercises_type_3{
+    display: none;
+}
+#text_answer{
+    color: aqua;
+    background-color: rgb(23, 23, 23);
+    width: 400px;
+    height: 50px;
+    border: solid;
+}
+.incorrectanswer{
+    background-color: red;
+}
+.correctanswer{
+    background-color: green;
+}

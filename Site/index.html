@@ -1,0 +1,208 @@
+<head>
+    <link href="styles.css" rel="stylesheet">
+    <title>Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="login">
+        <div id="logincontent">
+            <center>
+                <h1 style="font-family: sans-serif;">Log In</h1>
+            </center>
+            <br><br><br><br>
+            <div id="userinfo">
+                <div>
+                    <input type="text" placeholder="Username" id="username">    
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" id="password">    
+                </div>  
+                <div id="erro">
+                    *Wrong Password or Username.
+                </div>                   
+            </div>
+            <br><br><br><br>
+            <button id="buttonstyle2" onclick="login()"><b>Log In</b></button>
+            <br><br>
+            <center>
+                <h4 id="contact" onclick="showcontact()">Dont have an account?</h4>
+            </center>
+        </div>
+        <div id="showcontact">
+
+        </div>
+           
+    </div>
+    <div id="sitecontent">
+        <div id="header">
+            <div id="header-content">
+                <img src="menu.png" id="menu" onclick="sandwichmenu()">         
+                <button id="buttonstyle2" onclick="logout()">Log Out</button>                 
+            </div>
+                      
+        </div>
+        <div id="sandwich_menu">
+            <div id="conteudo_sandwich">
+                <div id="my_page" onclick="show_my_page()">My Page</div>
+                <div id="old_classes" onclick="show_old_classes()">
+                    Old Lessons
+                </div>
+                <div id="extra_tasks" onclick="show_extra_tasks()">Extra Tasks</div>
+                <div id="new_vocabulary" onclick="show_new_vocabulary()">New Vocabulary</div>
+                <div id="exercises" onclick="show_exercises()">Exercises</div>
+                <div id="rules" onclick="show_rules()">Rules</div>
+            </div>
+        </div>
+        <div id="usercontent">
+
+                <div id="mypage">
+                    <div id="mypage_Anna22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Victoria22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Tanya22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Angelika22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Margo22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                        <a href="https://openai.com/blog/chatgpt">Live Sheet</a>
+                    </div>
+                    <div id="mypage_Discoduck22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Anastasia22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Alex22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Alavierdov22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Olena22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Violeta22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Veronika22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Maria22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Julia22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Matvey22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                    <div id="mypage_Marina22">
+                        <h1 style="font-family: sans-serif;">Sorry <label id="user"></label>! Nothing To See Here Yet</h1>
+                    </div>
+                </div> 
+                <div id="oldclasses"><h1>Old Lessons</h1>
+                    <button onclick="downloadlesson1()">Download Lesson1</button>
+                    <button onclick="downloadlesson2()">Download Lesson1</button>
+                
+                </div>
+                <div id="extratasks"><h1>Extra Tasks</h1></div>
+                <div id="newvocabulary"><h1>New Vocabulary</h1></div>
+                <div id="exercisestab">
+                    <center>
+                        <h1>Exercises</h1>   
+                    </center>
+                    <div id="exercise_subject" onclick="exercisesPresentSimple()">Exercises Present Simple</div>
+                    <div id="exercise_subject" onclick="exercisesabouty()">exercises about y</div>
+                    <div id="exercise_subject" onclick="allexercises()">exercises about all</div>
+                    <br><br><h1>Question:<label id="Question"></label></h1>
+                    <div id="exercises_type_1">
+                        <input type="text" placeholder="Answer" id="text_answer">
+                        <button id="buttonstyle2" onclick="checkanswer()"><b>Submit</b></button>
+                    </div>
+                    <div id="exercises_type_2">
+                        <label id="part_1"></label><input type="text" placeholder="Answer" id="text_answer"><label id="part_2"></label>
+                        <button id="buttonstyle2" onclick="checkanswer()"><b>Submit</b></button>
+                    </div>                 
+                    <div id="exercises_type_3">
+                        <br><img id="exercises_type_3_img">
+                        <button id="buttonstyle1" value="A">A:<label id="AnswerA"></label></button>
+                        <button id="buttonstyle1" value="B">B:<label id="AnswerB"></label></button>
+                        <button id="buttonstyle1" value="C">C:<label id="AnswerC"></label></button>
+                        <button id="buttonstyle1" value="D">D:<label id="AnswerD"></label></button>                       
+                    </div>
+                    <br><br>
+                    <button id="buttonstyle2" onclick="rollquestion()"><b>Reroll</b></button> 
+
+                </div>
+                <div id="rulestab">
+                    <center>
+                        <h1>Rules</h1>    
+                    </center>
+                    
+                    <div id="tenses">
+                        <div><h1 id="PresentSimple">Present Simple</h1></div>
+                        <div id="PresentSimple_Content"><img style="width: 800px; height: 1300px" src="pastsimple/PastSimple.png">
+                            <img src="pastsimple/PastSimple2.png">
+                            <img style="width: 800px; height:1200;" src="pastsimple/common-irregular-verbs-1.png"><br>
+                            <img style="width: 800px; height:1200;" src="pastsimple/common-irregular-verbs-2.png"><br>
+                            <img style="width: 800px; height:1200;" src="pastsimple/common-irregular-verbs-3.png">
+                            </div>
+                        <div><h1 id="PresentContinuous">Present Continuous</h1></div>
+                        <div id="PresentContinuous_Content">
+                            <img style="width: 800px; height:1200;" src="Past Continuous/Past Continuous-1.png">
+                        </div>
+                        <div><h1 id="PresentPerfect">Present Perfect</h1></div>
+                        <div id="PresentPerfect_Content">
+                            <img style="width: 800px; height:1200;" src="Present Perfect/Present Perfect-1.png">
+                            <img style="width: 800px; height:1200;" src="Present Perfect/Present Perfect-2.png">
+                        </div>
+                        <div><h1 id="PresentPerfectContinuous">Present Perfect Continuous</h1></div>
+                        <div id="PresentPerfectContinuous_Content">
+                            <img style="width: 800px; height:1200;" src="Present Perfect Continuous/Present Perfect Continuous-1.png">
+                        </div>
+                        <div><h1 id="PastSimple">Past Simple</h1></div>
+                        <div id="PastSimple_Content">
+                            MISSING
+                        </div>
+                        <div><h1 id="PastContinuous">Past Continuous</h1></div>
+                        <div id="PastContinuous_Content">
+                            <img style="width: 800px; height:1200;" src="Past Continuous/Past Continuous-1.png">
+                        </div>
+                        <div><h1 id="PastPerfect">Past Perfect</h1></div>
+                        <div id="PastPerfect_Content">
+                            <img style="width: 800px; height:1200;" src="Past Perfect/Past Perfect-1.png">
+                        </div>
+                        <div><h1 id="PastPerfectContinuous">Past Perfect Continuous</h1></div>
+                        <div id="PastPerfectContinuous_Content">
+                            <img style="width: 800px; height:1200;" src="Past Perfect Continuous Tense/Past Perfect Continuous Tense-1.png">
+                        </div>
+                        <div><h1 id="FutureSimple">Future Simple</h1></div>
+                        <div id="FutureSimple_Content">
+                            <img style="width: 800px; height:1200;" src="Future Simple/Future Simple-1.png">
+                        </div>
+                        <div><h1 id="PassiveVoice">Passive Voice</h1></div>
+                        <div id="PassiveVoice_Content">
+                            MISSING
+                        </div>
+                        <div><h1 id="ConditionalSentences">Conditional Sentences</h1></div>
+                        <div id="ConditionalSentences_Content">
+                            MISSING
+                        </div>
+                        <div><h1 id="Gerund">Gerund</h1></div>
+                        <div id="Gerund_Content">
+                            MISSING
+                        </div>
+                        <br><br><br>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
